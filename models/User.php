@@ -100,4 +100,20 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     {
         $this->auth_key = \Yii::$app->security->generateRandomString();
     }
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUsertasks()
+    {
+        return $this->hasMany(Usertasks::className(), ['id_user' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUserworlds()
+    {
+        return $this->hasMany(Userworlds::className(), ['id_user' => 'id']);
+    }
+
 }

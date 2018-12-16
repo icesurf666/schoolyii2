@@ -35,7 +35,16 @@ AppAsset::register($this);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav navbar-right'],
             'items' => [
-                ['label' => 'Домой', 'url' => ['/site/index']],
+//                ['label' => 'Домой', 'url' => ['/site/index']],
+                ['label' => 'Languages', 'url' => ['/language']],
+                ['label' => 'Users', 'url' => ['/user']],
+                ['label' => 'Groupworlds', 'url' => ['/groupworld']],
+                ['label' => 'Russianworlds', 'url' => ['/russianworld']],
+                ['label' => 'Foreignworlds', 'url' => ['/foreignworld']],
+                ['label' => 'Task', 'url' => ['/task']],
+                ['label' => 'Usertasks', 'url' => ['/usertask']],
+                ['label' => 'Userwords', 'url' => ['/userworld']],
+
 //                ['label' => 'About', 'url' => ['/site/about']],
 //                ['label' => 'Contact', 'url' => ['/site/contact']],
 //                ['label' => 'Register', 'url' => ['site/register']],
