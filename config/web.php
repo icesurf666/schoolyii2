@@ -43,6 +43,10 @@ $config = [
             ],
         ],
         'db' => $db,
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => ['guest'],
+        ],
 
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -50,7 +54,17 @@ $config = [
             'rules' => [
             ],
         ],
+        'assetManager' => [
+            'appendTimestamp' => true,
+            'bundles' => [
+                'yii\bootstrap\BootstrapAsset' => false,
+                'yii\bootstrap\BootstrapPluginAsset' => false,
+            ],
+        ],
+
     ],
+
+
     'params' => $params,
 ];
 

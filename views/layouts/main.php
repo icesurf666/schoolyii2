@@ -26,7 +26,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
         NavBar::begin([
-            'brandLabel' => 'School of English',
+            'brandLabel' => 'School',
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
                 'class' => 'navbar-inverse navbar-fixed-top',
@@ -36,14 +36,14 @@ AppAsset::register($this);
             'options' => ['class' => 'navbar-nav navbar-right'],
             'items' => [
 //                ['label' => 'Домой', 'url' => ['/site/index']],
-                ['label' => 'Languages', 'url' => ['/language']],
-                ['label' => 'Users', 'url' => ['/user']],
-                ['label' => 'Groupworlds', 'url' => ['/groupworld']],
-                ['label' => 'Russianworlds', 'url' => ['/russianworld']],
-                ['label' => 'Foreignworlds', 'url' => ['/foreignworld']],
-                ['label' => 'Task', 'url' => ['/task']],
-                ['label' => 'Usertasks', 'url' => ['/usertask']],
-                ['label' => 'Userwords', 'url' => ['/userworld']],
+                ['label' => 'Языки', 'url' => ['/language']],
+                ['label' => 'Пользователи', 'url' => ['/user']],
+                ['label' => 'Группа слов', 'url' => ['/groupworld']],
+                ['label' => 'Русские слова', 'url' => ['/russianworld']],
+                ['label' => 'Иностранные слова', 'url' => ['/foreignworld']],
+                ['label' => 'Задания', 'url' => ['/task']],
+                ['label' => 'Изуч.задач', 'url' => ['/usertask']],
+                ['label' => 'Изуч.слова', 'url' => ['/userworld']],
 
 //                ['label' => 'About', 'url' => ['/site/about']],
 //                ['label' => 'Contact', 'url' => ['/site/contact']],

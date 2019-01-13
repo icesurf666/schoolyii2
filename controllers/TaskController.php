@@ -28,6 +28,16 @@ class TaskController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['create', 'update', 'delete'],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['teacher'],
+                    ],
+                    ],
+                ],
         ];
     }
 
