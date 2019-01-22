@@ -46,6 +46,9 @@ class GroupworldSearch extends Groupworld
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => 5,
+                ],
         ]);
 
         $this->load($params);

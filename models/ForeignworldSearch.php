@@ -46,6 +46,9 @@ class ForeignworldSearch extends Foreignworld
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => 5,
+            ],
         ]);
 
         $this->load($params);
