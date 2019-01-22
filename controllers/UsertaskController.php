@@ -97,6 +97,8 @@ class UsertaskController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'user' => ArrayHelper::map(User::find()->all(), 'id', 'username'),
+            'tasks' => ArrayHelper::map(Task::find()->all(), 'id', 'sentence'),
         ]);
     }
 

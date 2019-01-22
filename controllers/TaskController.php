@@ -10,6 +10,7 @@ use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * TaskController implements the CRUD actions for Task model.
@@ -105,6 +106,7 @@ class TaskController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'languages' => ArrayHelper::map(Language::find()->all(), 'id', 'language'),
         ]);
     }
 

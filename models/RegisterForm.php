@@ -49,8 +49,17 @@ class RegisterForm extends Model
         $user->username = $this->username;
         $user->email = $this->email;
         $user->setPassword($this->password);
-//        $user->generateAuthKey();
+        $user->generateAuthKey();
 
-        return $user->save() ? $user : null;
+//        return $user->save() ? $user : null;
+        if ($user->save()) {
+            $rbac = \Yii::$app->authManager;
+            $studentRole = $rbac->getRole('student');
+            $rbac->assign($studentRole, $user->id);
+            return $user;
+        }
+        return null;
+
+
     }
 }

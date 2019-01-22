@@ -97,6 +97,8 @@ class ForeignworldController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'languages' => ArrayHelper::map(Language::find()->all(), 'id', 'language'),
+            'russianworlds' => ArrayHelper::map(Russianworld::find()->all(), 'id', 'world'),
         ]);
     }
 

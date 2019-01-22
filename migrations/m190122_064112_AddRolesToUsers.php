@@ -29,19 +29,19 @@ class m190122_064112_AddRolesToUsers extends Migration
         $rbac->assign(
             $admin,
             \app\models\User::findOne([
-                'username' => 'admin'])->id
+                'username' => 'admin1'])->id
         );
         $admin = $rbac->getRole('teacher');
         $rbac->assign(
             $admin,
             \app\models\User::findOne([
-                'username' => 'teacher'])->id
+                'username' => 'teacher1'])->id
         );
         $admin = $rbac->getRole('student');
         $rbac->assign(
             $admin,
             \app\models\User::findOne([
-                'username' => 'student'])->id
+                'username' => 'student1'])->id
         );
     }
 

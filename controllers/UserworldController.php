@@ -97,6 +97,8 @@ class UserworldController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'user' => ArrayHelper::map(User::find()->all(), 'id', 'username'),
+            'foreignworlds' => ArrayHelper::map(Foreignworld::find()->all(), 'id', 'translate'),
         ]);
     }
 

@@ -30,8 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'translate',
             'sound',
             'true_answer',
-            //'false_answer',
-            //'id_languages',
+            'false_answer',
+            'id_languages',
 
             ['class' => 'yii\grid\ActionColumn',
                 'visible' => \Yii::$app->user->can('teacher')],

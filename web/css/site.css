@@ -12,13 +12,30 @@ body {
 .body-content{
     color: white;
 }
-.site-index{
+.bg{
+    background-image: url("../img/bg.jpg");
+    background-position: top center;
+    height: 800px;
+
+
     /*background-image: url(../img/card-bg.png),radial-gradient(1111.77px at 50% 107.79%,#ff9d9d 0,#787ad6 100%);*/
     /*background-position: center,center;*/
-    /*background-repeat: repeat,no-repeat;*/
+    /*background-repeat: repeat;*/
     /*background-blend-mode: darken;*/
-    background-image: url("../img/homebg.jpg");
 
+
+}
+.site-text{
+    margin-top: 100px;
+}
+.site-index{
+
+    /*background-image: url("../img/homebg.jpg");*/
+
+
+}
+h1{
+    color: white;
 }
 
 .wrap > .container {
@@ -132,6 +149,13 @@ a.desc:after {
 .nav li > form > button.logout {
     padding: 15px;
     border: none;
+}
+
+.table-bordered{
+
+}
+.table{
+    background-color: white;
 }
 
 @media(max-width:767px) {

@@ -4,10 +4,11 @@
 
 $this->title = 'My Yii Application';
 ?>
+
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Добро пожаловать в школу изучения английского языка</h1>
+        <h1 class="site-text">Добро пожаловать в школу изучения английского языка</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 

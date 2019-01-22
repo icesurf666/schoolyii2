@@ -11,6 +11,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+
+
 /**
  * RussianworldController implements the CRUD actions for Russianworld model.
  */
@@ -95,6 +97,7 @@ class RussianworldController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'groupworlds' => ArrayHelper::map(Groupworld::find()->all(), 'id', 'title'),
         ]);
     }
 
