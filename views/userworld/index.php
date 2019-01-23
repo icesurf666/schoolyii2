@@ -15,9 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Userworld', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <?php if (\Yii::$app->user->can('student')): ?>
+        <p>
+            <?= Html::a('Create usertask', ['create'], ['class' => 'btn btn-success']) ?>
+        </p>
+    <?php endif; ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -30,7 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_foreignworlds',
             'id_user',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+                'visible' => \Yii::$app->user->can('student')],
         ],
     ]); ?>
 </div>

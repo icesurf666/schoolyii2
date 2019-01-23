@@ -56,6 +56,8 @@ class RegisterForm extends Model
             $rbac = \Yii::$app->authManager;
             $studentRole = $rbac->getRole('student');
             $rbac->assign($studentRole, $user->id);
+
+
             return $user;
         }
         return null;

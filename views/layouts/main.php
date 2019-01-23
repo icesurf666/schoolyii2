@@ -37,24 +37,39 @@ AppAsset::register($this);
             'items' => [
 //                ['label' => 'Домой', 'url' => ['/site/index']],
                 ['label' => 'Языки', 'url' => ['/language']],
-                ['label' => 'Пользователи', 'url' => ['/user']],
-                ['label' => 'Группа слов', 'url' => ['/groupworld']],
-                ['label' => 'Русские слова', 'url' => ['/russianworld']],
-                ['label' => 'Иностранные слова', 'url' => ['/foreignworld']],
-                ['label' => 'Задания', 'url' => ['/task']],
-                ['label' => 'Изуч.задач', 'url' => ['/usertask']],
-                ['label' => 'Изуч.слова', 'url' => ['/userworld']],
+                Yii::$app->user->can('admin') ? (
+                ['label' => 'Пользователи', 'url' => ['/user']]
+                 ) : '',
+                Yii::$app->user->can('student') ? (
+                ['label' => 'Группа слов', 'url' => ['/groupworld']]
+                 ) : '',
+                Yii::$app->user->can('student') ? (
+                ['label' => 'Русские слова', 'url' => ['/russianworld']]
+                ) : '',
+                Yii::$app->user->can('student') ? (
+                ['label' => 'Иностранные слова', 'url' => ['/foreignworld']]
+                ) : '',
+                Yii::$app->user->can('student') ? (
+                ['label' => 'Задания', 'url' => ['/task']]
+                ) : '',
+                Yii::$app->user->can('student') ? (
+                ['label' => 'Изуч.задач', 'url' => ['/usertask']]
+                ) : '',
+                Yii::$app->user->can('student') ? (
+                ['label' => 'Изуч.слова', 'url' => ['/userworld']]
+                ) : '',
+
+
 
 //                ['label' => 'About', 'url' => ['/site/about']],
 //                ['label' => 'Contact', 'url' => ['/site/contact']],
 //                ['label' => 'Register', 'url' => ['site/register']],
                 Yii::$app->user->isGuest ? (
-//                ['label' => 'Login', 'url' => ['/site/login']]
-                '
-                        <li> <a href="/site/login">Вход</a></li>
-                        <li> <a href="/site/register">Региcтрация</a></li>
-                        '
-                ) : (
+            ['label' => 'Регистрация', 'url' => ['/register']]
+            ) : '',
+            Yii::$app->user->isGuest ? (
+            ['label' => 'Вход', 'url' => ['/site/login']]
+            ) : (
                     '<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(

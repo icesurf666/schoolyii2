@@ -8,6 +8,8 @@ use app\models\GroupworldSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+
 
 /**
  * GroupworldController implements the CRUD actions for Groupworld model.
@@ -24,6 +26,16 @@ class GroupworldController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                ],
+            ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['create', 'update', 'delete'],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['teacher'],
+                    ],
                 ],
             ],
         ];

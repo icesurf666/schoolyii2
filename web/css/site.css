@@ -29,7 +29,7 @@ body {
     margin-top: 100px;
 }
 .site-index{
-
+    padding-top: 65px;
     /*background-image: url("../img/homebg.jpg");*/
 
 
@@ -78,9 +78,34 @@ h1{
 .jumbotron {
     color: white;
     text-align: center;
-    background-color: transparent;
-}
 
+}
+.jumbotro{
+    margin-top: 40px;
+    background-image: url("../img/Hogwartscrest2.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 585px;
+    height: 300px;
+}
+.site-welcome{
+text-align: center;
+}
+.button-wrapper{
+    width: 585px;
+    text-align: center;
+}
+.button-welcome{
+    margin-top: 32px;
+    border: 0;
+    width: 245px;
+    height: 64px;
+    background-color: orange;
+    border-radius: 30px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
 .jumbotron .btn {
     font-size: 21px;
     padding: 14px 24px;

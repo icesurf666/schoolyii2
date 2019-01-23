@@ -6,42 +6,26 @@ $this->title = 'My Yii Application';
 ?>
 
 <div class="site-index">
-
-    <div class="jumbotron">
-        <h1 class="site-text">Добро пожаловать в школу изучения английского языка</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+    <div class="jumbotro">
     </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-3">
-                <a href="site/" class="btn btn-success btn-sm btn-shadow btn-outline btn-alls">
-                    <i class="fa fa-graduation-cap" style="font-size:40px;"></i><br>
-                    <span style="font-size:25px; font-family:'Josefin Sans', 'Roboto', sans-serif;">Задания</span>
-                </a>
-            </div>
-            <div class="col-lg-3">
-                <a href="site/" class="btn btn-success btn-sm btn-shadow btn-outline btn-alls">
-                    <i class="fa fa-graduation-cap" style="font-size:40px;"></i><br>
-                    <span style="font-size:25px; font-family:'Josefin Sans', 'Roboto', sans-serif;">Словарь</span>
-                </a>
-            </div>
-            <div class="col-lg-3">
-                <a href="site/" class="btn btn-success btn-sm btn-shadow btn-outline btn-alls">
-                    <i class="fa fa-graduation-cap" style="font-size:40px;"></i><br>
-                    <span style="font-size:25px; font-family:'Josefin Sans', 'Roboto', sans-serif;">Уроки</span>
-                </a>
-            </div>
-            <div class="col-lg-3">
-                <a href="site/" class="btn btn-success btn-sm btn-shadow btn-outline btn-alls">
-                    <i class="fa fa-graduation-cap" style="font-size:40px;"></i><br>
-                    <span style="font-size:25px; font-family:'Josefin Sans', 'Roboto', sans-serif;">Курсы</span>
-                </a>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <div class="site-welcome">
+                <h1> Добро пожаловать в школу иностранного языка</h1>
             </div>
         </div>
+        <div class="col-lg-6 col-lg-offset-3">
+            <div class="button-wrapper">
+           <button class="button-welcome">Начать учиться</button>
+        </div>
+        </div>
+</div>
+    <div class="body-content">
+
+       
 
     </div>
 </div>
