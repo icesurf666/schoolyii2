@@ -30,7 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'isknow',
             'id_foreignworlds',
-            'id_user',
+//            'id_user',
+
+            [
+                'attribute' => 'user', 'value' => function($model) {
+                return $model->user->email;
+            }],
 
             ['class' => 'yii\grid\ActionColumn',
                 'visible' => \Yii::$app->user->can('student')],
