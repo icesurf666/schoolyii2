@@ -19,7 +19,9 @@ $this->title = 'My Yii Application';
         </div>
         <div class="col-lg-6 col-lg-offset-3">
             <div class="button-wrapper">
-           <button class="button-welcome">Начать учиться</button>
+                <form action="http://localhost:8080/site/register">
+           <button type="submit" class="button-welcome">Начать учиться </button>
+                </form>
         </div>
         </div>
 </div>
